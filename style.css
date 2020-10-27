@@ -1,0 +1,189 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*Css Reset (Reset dadan padding o margin browser(default)*/
+}
+:root {
+  --color1: #d5c7ba;
+  --color2: #54615d;
+  --color3: #201f1f;
+  --color4: #c0a891;
+  --color5: #ebeec9;
+}
+header {
+}
+body {
+  background-color: var(--color3);
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  background-color: var(--color2);
+}
+.nav-d {
+  transition: opacity 300ms ease-in-out;
+  animation: appear2 300ms ease-in-out forwards;
+}
+@keyframes appear2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.nav-scrolled {
+  position: sticky;
+  top: 0;
+  animation: appear 300ms ease-in-out forwards;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.nav-item span {
+  position: relative;
+  z-index: 100;
+  color: var(--color5);
+}
+.nav-item::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #444242;
+  transition: 300ms ease-in-out;
+}
+.nav-item:hover::after {
+  top: 0;
+  bottom: 0;
+  transition: 500ms ease-in-out;
+  transition-delay: 100ms;
+}
+.nav-item {
+  position: relative;
+  overflow: hidden;
+  font-size: xx-large;
+  font-weight: bold;
+
+  margin-bottom: 10px;
+  cursor: pointer;
+  /*-----------------------*/
+  display: flex;
+  align-items: center;
+  /* bala chap paeen rast ba 4 meghdar*/
+  /* bala-paeen chap-rast ba 2 meghdar */
+  padding: 0 30px;
+  height: 100%;
+}
+.nav-list {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 45%;
+  height: 50px;
+  margin-left: 55%;
+  justify-content: space-around;
+}
+
+#welcome {
+  color: yellow;
+  font-style: bold;
+  margin-left: 440px;
+}
+.social-media-icons {
+  height: 30px;
+  width: 150px;
+  margin: 10px auto;
+
+  display: flex;
+}
+.link-discord {
+}
+
+.sm-youtube {
+  margin-left: 40px;
+}
+.sm-aparat {
+  margin-left: 10px;
+}
+.sm-insta {
+  margin-left: 10px;
+}
+
+.zula-b {
+  /* background-image: url("./Img/EndLess\ Web\ BackGround1\ invis\ just\ yellow.png");
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position-y: 400px; */
+}
+.zula-cart {
+  width: 450px;
+  height: 300px;
+  margin: auto 20px;
+  font-size: xx-large;
+  background-color: var(--color2);
+  border-radius: 10%;
+}
+.zula-cart h3 {
+  text-align: center;
+}
+.zula-cart h5 {
+  text-align: center;
+}
+.zula-cart img {
+  width: 150px;
+  margin-left: 130px;
+  margin-top: 10px;
+}
+.zula-container {
+  margin-top: 10px;
+  display: flex;
+  height: 300px;
+}
+.zula-p {
+  color: yellow;
+  font-size: x-large;
+  border: 2px solid #ff0007;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 5px 20px 5px 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+.zula-mod {
+}
+.zula-top-teams {
+  height: 150px;
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-around;
+}
+.zula-mods {
+  font-size: xx-large;
+  background-color: var(--color2);
+  border: 2px solid purple;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.zula-mods p {
+  font-size: 25px;
+}
+.zula-mods h3 {
+  margin-bottom: 5px;
+}
